@@ -7,41 +7,55 @@
 	},
 	{ "caption": "-", "id": "side-bar-start-separator" },
 	{
-		"caption": "Duplicate…",
-		"id": "side-bar-duplicate",
-		"command": "side_bar_duplicate",
-		"args": { "paths": [] }
-	},
-	{ "caption": "-", "id": "side-bar-duplicate-separator" },
-
-	{
-		"caption": "Rename…",
-		"id": "side-bar-rename",
-		"command": "side_bar_rename",
+		"caption": "New File…",
+		"id": "side-bar-new-file",
+		"command": "side_bar_new_file",
 		"args": { "paths": [] }
 	},
 	{
-		"caption": "Move…",
-		"id": "side-bar-move",
-		"command": "side_bar_move",
+		"caption": "New Folder…",
+		"id": "side-bar-new-directory",
+		"command": "side_bar_new_directory",
 		"args": { "paths": [] }
 	},
-	{ "caption": "-", "id": "side-bar-rename-move-separator" },
-
+	{ "caption": "-", "id": "side-bar-new-separator" },
 	{
-		"caption": "Delete",
-		"id": "side-bar-delete",
-		"command": "side_bar_delete",
+		"caption": "Save Views",
+		"id": "side-bar-folder-save-views",
+		"command": "side_bar_folder_save_views",
 		"args": { "paths": [] }
 	},
 	{
-		"caption": "Empty",
-		"id": "side-bar-empty",
-		"command": "side_bar_empty",
+		"caption": "Close Views",
+		"id": "side-bar-folder-close-views",
+		"command": "side_bar_folder_close_views",
 		"args": { "paths": [] }
 	},
-	{ "caption": "-", "id": "side-bar-delete-separator" },
+	{
+		"caption": "Close Other Views",
+		"id": "side-bar-folder-close-other-views",
+		"command": "side_bar_folder_close_other_views",
+		"args": { "paths": [] }
+	},
 	{ "caption": "-", "id": "side-bar-save-close-views-separator" },
+	{
+		"caption": "Edit",
+		"id": "side-bar-edit",
+		"command": "side_bar_edit",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Edit to Right",
+		"id": "side-bar-edit-to-right",
+		"command": "side_bar_edit_to_right",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Open / Run",
+		"id": "side-bar-open",
+		"command": "side_bar_open",
+		"args": { "paths": [] }
+	},
 	{
 		"caption": "Open In Browser",
 		"id": "side-bar-open-in-browser",
@@ -179,6 +193,68 @@
 
 	{ "caption": "-", "id": "side-bar-edit-open-separator" },
 
+	{
+		"caption": "Find & Replace…",
+		"id": "side-bar-find-selected",
+		"command": "side_bar_find_in_selected",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Find Files Named…",
+		"id": "side-bar-find-files",
+		"command": "side_bar_find_files_path_containing",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Find Advanced",
+		"id": "side-bar-find-advanced",
+		"children": [
+			{
+				"caption": "In Parent Folder…",
+				"id": "side-bar-find-parent",
+				"command": "side_bar_find_in_parent",
+				"args": { "paths": [] }
+			},
+			{ "caption": "-", "id": "side-bar-find-parent-separator" },
+			{
+				"caption": "In Project…",
+				"id": "side-bar-find-in-project",
+				"command": "side_bar_find_in_project",
+				"args": { "paths": [] }
+			},
+			{
+				"caption": "In Project Folder…",
+				"id": "side-bar-find-project-folder",
+				"command": "side_bar_find_in_project_folder",
+				"args": { "paths": [] }
+			},
+			{
+				"caption": "In Project Folders…",
+				"id": "side-bar-find-project-folders",
+				"command": "side_bar_find_in_project_folders"
+			},
+			{ "caption": "-", "id": "side-bar-find-project-separator" },
+			{
+				"id": "side-bar-find-in-files-with-extension",
+				"command": "side_bar_find_in_files_with_extension",
+				"args": { "paths": [] }
+			},
+			{
+				"caption": "In Paths Containing…",
+				"id": "side-bar-find-files-path-containing",
+				"command": "side_bar_find_files_path_containing",
+				"args": { "paths": [] }
+			},
+			{ "caption": "-", "id": "side-bar-mass-rename-separator" },
+			{
+				"caption": "Mass Rename Selection…",
+				"id": "side-bar-mass-rename",
+				"command": "side_bar_mass_rename",
+				"args": { "paths": [] }
+			}
+		]
+	},
+	{ "caption": "-", "id": "side-bar-find-separator" },
 	{
 		"caption": "Cut",
 		"id": "side-bar-clip-cut",
@@ -377,6 +453,41 @@
 	},
 	{ "caption": "-", "id": "side-bar-clip-separator" },
 	{
+		"caption": "Duplicate…",
+		"id": "side-bar-duplicate",
+		"command": "side_bar_duplicate",
+		"args": { "paths": [] }
+	},
+	{ "caption": "-", "id": "side-bar-duplicate-separator" },
+
+	{
+		"caption": "Rename…",
+		"id": "side-bar-rename",
+		"command": "side_bar_rename",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Move…",
+		"id": "side-bar-move",
+		"command": "side_bar_move",
+		"args": { "paths": [] }
+	},
+	{ "caption": "-", "id": "side-bar-rename-move-separator" },
+
+	{
+		"caption": "Delete",
+		"id": "side-bar-delete",
+		"command": "side_bar_delete",
+		"args": { "paths": [] }
+	},
+	{
+		"caption": "Empty",
+		"id": "side-bar-empty",
+		"command": "side_bar_empty",
+		"args": { "paths": [] }
+	},
+	{ "caption": "-", "id": "side-bar-delete-separator" },
+	{
 		"caption": "Refresh",
 		"id": "side-bar-refresh",
 		"command": "refresh_folder_list"
@@ -480,6 +591,12 @@
 		"args": { "paths": [] }
 	},
 
+	{ "caption": "-", "id": "side-bar-donate-separator" },
+	{
+		"caption": "Give 20",
+		"command": "side_bar_donate",
+		"args": { "paths": [] }
+	},
 	{ "caption": "-", "id": "side-bar-end-separator" },
 	{
 		"caption": "zzzzz_side_bar",
